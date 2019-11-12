@@ -12,14 +12,14 @@ set_up_consul:
       
 do_some_sleeping:
   salt.function:
-    - tgt: 'roles:salt-master'
+    - tgt: 'master-node'
     - name: cmd.run
     - arg:
       - sleep 60
       
 set_up_salt_master:
   salt.state:
-    - tgt: 'roles:salt-master'
+    - tgt: 'master-node'
     - highstate: True
 
 set_up_db_server:
