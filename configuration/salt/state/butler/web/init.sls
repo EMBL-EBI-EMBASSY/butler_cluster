@@ -1,8 +1,8 @@
-butler-clone:
+butler-web-clone:
   git.latest:
     - rev: master
     - force_reset: True
-    - name: https://github.com/anmoljh/butler_embassy.git
+    - name: https://github.com/EMBL-EBI-EMBASSY/butler_embassy.git
     - target: /opt/butler
     - submodules: True
 
