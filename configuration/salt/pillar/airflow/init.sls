@@ -6,3 +6,4 @@ airflow_web_server_port: 8889
 airflow_celery_db_url: postgresql://butler_admin:butler@postgresql.service.consul:5432/celery
 airflow_worker_concurrency: 14
 airflow_job_queue_url: amqp://butler:butler@rabbitmq.service.consul:5672/butler_vhost
+airflow_fernet_key: pNT9B-J7R6fdbxsugxlLm_6Qhd3ElsVfRJlUeddoXgs=
