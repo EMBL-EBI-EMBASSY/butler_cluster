@@ -17,7 +17,6 @@ base:
     - celery
     - airflow
     - airflow.init-db
-    - airflow.patch-airflow-url-prefix
     - airflow.server
     - jsonmerge
     - butler.tracker
@@ -26,12 +25,9 @@ base:
     - postgres
     - run-tracking-db
     - run-tracking-db.create_tables
-    - grafana.createdb
     - airflow.airflow-db
   'G@roles:job-queue':
     - rabbitmq
-  'G@roles:R':
-    - R
   'G@roles:butler-web':
     - git
     - nginx

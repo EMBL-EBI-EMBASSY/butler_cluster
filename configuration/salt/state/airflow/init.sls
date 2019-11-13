@@ -25,7 +25,6 @@ install_airflow:
          SLUGIFY_USES_TEXT_UNIDECODE: u'yes'
     - upgrade: False
     
-    
 install_statsd:
   pip.installed: 
     - name: statsd
