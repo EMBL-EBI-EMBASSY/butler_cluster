@@ -6,22 +6,29 @@ python_pip_setuptools:
 prereqs_pip:
   pkg.latest:
     - pkgs: 
-      - python3-pip
       - gcc
       - python3-devel
       - python36-psycopg2
-      - python36-virtualenv
 
 install_numpy:
   pip.installed: 
     - name: numpy
     - upgrade: True
-    
+
+pip_pkg:
+  pkg.installed:
+    - python3-pip
+
+virtualenv_pkg:
+  pkg.installed:
+    - python36-virtualenv    
 
 virtualenv_airflow:
   virtualenv.managed
     - name: /opt/venv/airflow
-    - 
+    - system_stie_packages: False
+    - require:
+      - pkg: virtualenv_pkg 
   
 install_airflow:
   pip.installed: 
@@ -33,7 +40,7 @@ install_airflow:
     - upgrade: False
     - require:
       - virtualenv: virtualenv_airflow
-      - pkg: prereqs_pip
+      - pkg: pip_pkg
     
     
 install_statsd:
