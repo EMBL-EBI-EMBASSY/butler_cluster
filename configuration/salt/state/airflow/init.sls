@@ -33,14 +33,10 @@ virtualenv_airflow:
 install_airflow:
   pip.installed: 
     - name: apache-airflow == 1.10.6
-    - bin_env: /usr/pip3
     - ignore-installed: True
     - env_vars:
          SLUGIFY_USES_TEXT_UNIDECODE: u'yes'
     - upgrade: False
-    - require:
-      - virtualenv: virtualenv_airflow
-      - pkg: pip_pkg
     
     
 install_statsd:
