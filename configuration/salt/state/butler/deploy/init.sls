@@ -40,12 +40,6 @@ set_up_tracker:
      - tgt_type: grain
      - highstate: True
 
-set_up_monitoring_server:
-   salt.state:
-     - tgt: 'roles:monitoring-server'
-     - tgt_type: grain
-     - highstate: True
-     
 set_up_workers:
    salt.state:
      - tgt: 'roles:worker'
