@@ -20,11 +20,11 @@ install_numpy:
   
 install_airflow:
   pip.installed: 
-    - name: apache-airflow == 1.8.1
+    - name: apache-airflow
     - ignore-installed: True
     - env_vars:
          SLUGIFY_USES_TEXT_UNIDECODE: u'yes'
-    - upgrade: False
+    - upgrade: True
     
     
 install_statsd:
