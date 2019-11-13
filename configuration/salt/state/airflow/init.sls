@@ -17,11 +17,11 @@ install_numpy:
 
 pip_pkg:
   pkg.installed:
-    - python3-pip
+    - name: python3-pip
 
 virtualenv_pkg:
   pkg.installed:
-    - python36-virtualenv    
+    - name: python36-virtualenv    
 
 virtualenv_airflow:
   virtualenv.managed
