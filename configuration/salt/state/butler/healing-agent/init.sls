@@ -2,7 +2,7 @@ butler-heal-clone:
   git.latest:
     - rev: master
     - force_reset: True
-    - name: https://github.com/EMBL-EBI-EMBASSY/butler_embassy.git
+    - name: https://github.com/EMBL-EBI-EMBASSY/butler_cluster.git
     - target: /opt/butler
     - submodules: True
     
