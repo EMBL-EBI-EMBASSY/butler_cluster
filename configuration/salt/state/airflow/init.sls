@@ -6,25 +6,34 @@ python_pip_setuptools:
 prereqs_pip:
   pkg.latest:
     - pkgs: 
-      - python2-pip
+      - python3-pip
       - gcc
-      - python-devel
-      - python-psycopg2
+      - python3-devel
+      - python36-psycopg2
+      - python36-virtualenv
 
-  
 install_numpy:
   pip.installed: 
     - name: numpy
     - upgrade: True
     
+
+virtualenv_airflow:
+  virtualenv.managed
+    - name: /opt/venv/airflow
+    - 
   
 install_airflow:
   pip.installed: 
-    - name: apache-airflow == 1.8.1
+    - name: apache-airflow == 1.10.6
+    - bin_env: /opt/venv/airflow
     - ignore-installed: True
     - env_vars:
          SLUGIFY_USES_TEXT_UNIDECODE: u'yes'
-    - upgrade: True
+    - upgrade: False
+    - require:
+      - virtualenv: virtualenv_airflow
+      - pkg: prereqs_pip
     
     
 install_statsd:
