@@ -9,25 +9,14 @@ prereqs_pip:
       - gcc
       - python3-devel
       - python36-psycopg2
+      - python3-pip
+      - python36-virtualenv
 
 install_numpy:
   pip.installed: 
     - name: numpy
     - upgrade: True
 
-pip_pkg:
-  pkg.installed:
-    - name: python3-pip
-
-virtualenv_pkg:
-  pkg.installed:
-    - name: python36-virtualenv    
-
-virtualenv_airflow:
-  virtualenv.managed
-    - name: /opt/venv/airflow
-    - system_stie_packages: False
-  
 install_airflow:
   pip.installed: 
     - name: apache-airflow == 1.10.6
