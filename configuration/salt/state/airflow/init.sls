@@ -27,8 +27,6 @@ virtualenv_airflow:
   virtualenv.managed
     - name: /opt/venv/airflow
     - system_stie_packages: False
-    - require:
-      - pkg: virtualenv_pkg 
   
 install_airflow:
   pip.installed: 
