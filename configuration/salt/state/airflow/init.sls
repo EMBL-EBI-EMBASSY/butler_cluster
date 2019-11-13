@@ -10,7 +10,6 @@ prereqs_pip:
       - python3-devel
       - python36-psycopg2
       - python3-pip
-      - python36-virtualenv
 
 install_numpy:
   pip.installed: 
