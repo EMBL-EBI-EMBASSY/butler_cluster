@@ -1,1 +1,1 @@
-consul.bootstrap.expect: 3
+consul.bootstrap.expect: 1
