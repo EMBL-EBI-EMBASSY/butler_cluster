@@ -16,6 +16,6 @@ postgres-devel:
   pkg.installed:
     - name: postgresql-devel
     
-python-psycopg2:
+python3-psycopg2:
   pkg.installed:
-    - name: python-psycopg2
+    - name: python3-psycopg2
