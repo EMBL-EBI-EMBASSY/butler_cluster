@@ -7,12 +7,14 @@ base:
     - consul.ui
   'G@roles:worker':
     - git
+    - gcc
     - celery
     - airflow
     - airflow.worker
     - butler.tracker
   'G@roles:tracker':
     - git
+    - gcc
     - run-tracking-db.set_db_url
     - celery
     - airflow

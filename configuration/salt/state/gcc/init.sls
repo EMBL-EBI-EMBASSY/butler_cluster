@@ -1,4 +1,4 @@
-install_git:
+install_gcc:
   pkg.latest:
     - pkgs: 
-      - git
+      - gcc
